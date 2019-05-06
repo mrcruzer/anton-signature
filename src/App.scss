@@ -1,0 +1,72 @@
+:root{
+  --color-white: #fff;
+  --color-blue: #0065a1;
+  --color-grey: #b2b3b2;
+
+  --p-15: 15px;
+  --mb-15px: 15px;
+  --border-1: 1px solid #f2f2f2;
+}
+
+body{
+  color: #120705;
+  background: #F5F7FA;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+input{
+  border-radius: 25px;
+  border: var(--border-1);
+  padding: 10px;
+}
+.main-signature{
+ display: grid;
+ grid-template-columns: repeat(3, 1fr)
+}
+.main-aside{
+  
+  padding: var(--p-15);
+}
+.SignatureFormWrapper{
+  background: var(--color-white);
+  padding: var(--p-15);
+}
+.main-render-preview{
+  padding: var(--p-15);
+  
+
+.SignaturePreviewWrapper{
+    background: var(--color-white);
+    min-height: 100%;
+  }
+}
+
+.email-mockup{
+
+  >div{
+    padding: var(--p-15);
+    
+  }
+  div:nth-child(1){
+    background: var(--color-blue);
+    color: var(--color-white);
+  }
+  div:nth-child(2){
+    border-bottom: var(--border-1);
+    color: var(--color-grey);
+  }
+  div:nth-child(3){
+    border-bottom: var(--border-1);
+    color: var(--color-grey);
+  }
+  div:nth-child(4){
+    color: var(--color-grey);
+  }
+}
+.main-signature-form{
+  label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--mb-15px);
+  }
+}

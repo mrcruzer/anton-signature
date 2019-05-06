@@ -1,26 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { PureComponent } from 'react';
+import './App.scss';
+import SignatureForm from './components/SignatureForm/SignatureForm';
+import SignaturePreview from './components/SignaturePreview/SignaturePreview';
+
+class App extends PureComponent  {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hasError: false,
+      signatureName: "",
+      signatureCompany: "Anton Agency",
+      signaturePosition: "",
+      signatureDepartament: "",
+      signaturePhone: "",
+      signatureMobile: "",
+      signatureWebsite: "",
+      signatureEmail: "",
+      signatureAddress: ""
+      
+    }
+ 
+    
+  }
+
+  
+
+  
+  handleInput = (e) => {
+    const {name, value} = e.target
+    this.setState({
+      
+      [name]: value
+
+    })
+
+  }
+
+  render(){
+    //console.log(this.state)
+    return (
+      <main className="main-signature">
+        <div></div>
+        <div className="main-render-preview">
+          <SignaturePreview getSignatureData={this.state}/>
+        </div>
+        <aside className="main-aside">
+          <SignatureForm handleInput={this.handleInput} />
+        </aside>
+      </main>
+    );
+  }
 }
 
 export default App;
