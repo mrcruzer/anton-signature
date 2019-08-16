@@ -12,11 +12,36 @@ class SignaturePreview extends PureComponent {
     };
   }
 
+ 
   render () {
 
     
-
     const signatureData = this.props.getSignatureData;
+    let color = signatureData.textColor;
+
+    const nameStyle = {
+      
+      fontSize: '16px',
+      fontWeight: 'bold',
+      color: color
+    }
+    const smallTextBold = {
+      fontWeight: 'bold',
+      color: color
+    }
+    const fontStyle = {
+      fontSize: '12px',
+      color: signatureData.textActive
+    }
+
+    const tableLeftBorder = {
+      borderLeft: `1px solid ${color}`,
+      paddingLeft: '10px'
+    }
+  
+
+    
+    
     // console.log(this.props.getSignatureData)
 
     if (this.state.hasError) {
@@ -25,7 +50,7 @@ class SignaturePreview extends PureComponent {
     return (
       <div className="SignaturePreviewWrapper">
         <div className="email-mockup">
-          <div> New Email</div>
+          <div> Nuevo Correo Electronico</div>
           <div>Para: Anton Agency</div>
           <div>Asunto: ¡Probando mi firma de correos!</div>
           <div>
@@ -35,29 +60,30 @@ class SignaturePreview extends PureComponent {
           </div>
           <div></div>
         </div>
+
         <table  data-mysignature-date="2019-04-26T17:11:33.208Z" data-mysignature-is-paid="0" cellSpacing="0" width="470" cellPadding="0" border="0">
-          <tbody>
+          <tbody style={fontStyle}>
                 <tr>
                 <td valign="top" width="100">
                   <img alt="Anton Agency" width="100"  src="https://anton.agency/wp-content/uploads/2018/09/Anton-Advertising-Agency-Icon.png" />
                 </td>
-                <td>
-                <table cellSpacing="0" cellPadding="0" border="0">
+                <td style={tableLeftBorder}>
+                <table  cellSpacing="0" cellPadding="0" border="0">
                   <tbody>
                       <tr>
-                        <td> <span>{signatureData.signatureName}</span> | <span>{signatureData.signaturePosition}</span></td>
+                        <td> <span style={nameStyle}>{signatureData.signatureName}</span></td>
                       </tr>
                       <tr>
-                        <td> <div>{signatureData.signatureCompany} | {signatureData.signatureDepartament} </div> </td>
+                        <td><div><span>{signatureData.signaturePosition}</span> | {signatureData.signatureDepartament} | {signatureData.signatureCompany}</div> </td>
                       </tr>
                       <tr>
-                        <td> <div> <span>Cel:&nbsp;</span> <a href={"tel:"+signatureData.signatureMobile}>{signatureData.signatureMobile}</a> </div> </td> </tr>
+                        <td> <div> <span style={smallTextBold}>Cel:&nbsp;</span> <a href={"tel:"+signatureData.signatureMobile}>{signatureData.signatureMobile}</a> </div> </td> </tr>
                       <tr>
-                        <td> <div> <span>Tel:&nbsp;</span> <a href={"tel:"+signatureData.signaturePhone}>{signatureData.signaturePhone}</a> </div> </td> </tr>
+                        <td> <div> <span style={smallTextBold}>Tel:&nbsp;</span> <a href={"tel:"+signatureData.signaturePhone}>{signatureData.signaturePhone}</a> </div> </td> </tr>
                       <tr>
-                          <td> <div> <span>Email:&nbsp;</span> <a href={"mailto:"+signatureData.signatureEmail} target="_blank">{signatureData.signatureEmail}</a> </div> </td> </tr>
+                          <td> <div> <span style={smallTextBold}>Email:&nbsp;</span> <a href={"mailto:"+signatureData.signatureEmail} target="_blank">{signatureData.signatureEmail}</a> </div> </td> </tr>
                       <tr>
-                        <td> <div> <span>A:&nbsp;</span>{signatureData.signatureAddress}</div> </td> </tr>    <tr> <td> <div> <a href={signatureData.signatureWebsite} target="_blank">{signatureData.signatureWebsite}</a> </div> </td>
+                        <td><div> <span style={smallTextBold}>A:&nbsp;</span>{signatureData.signatureAddress}</div> </td> </tr>    <tr> <td> <div> <a href={signatureData.signatureWebsite} target="_blank">{signatureData.signatureWebsite}</a> </div> </td>
                       </tr>
                       <tr>
                         <td>

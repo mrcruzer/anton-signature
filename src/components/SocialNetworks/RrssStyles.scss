@@ -1,0 +1,21 @@
+
+.SocialNetworksWrapper{
+  background: var(--color-white);
+  margin-top: 15px;
+}
+.rrss-list{
+  list-style:none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.rrss-icon{
+  height: 50px;
+  width: 50px;
+  margin: 05px;
+  padding: 10px;
+  img{
+    max-width: 100%;
+  }
+}
