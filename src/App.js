@@ -43,6 +43,14 @@ class App extends Component  {
   addRrss = (e) => {
     const title = e.currentTarget.value;
 
+    //const hola = { name, value } = e.target
+
+    //console.log(hola);
+
+    
+
+    //console.log(title);
+
     if(this.state.rrss.includes(title)){
       return;
     }
