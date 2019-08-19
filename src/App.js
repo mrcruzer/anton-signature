@@ -24,7 +24,8 @@ class App extends Component  {
       signatureAddress: "C/ Puerto Rico 310, Alma Rosa 1, Santo Domingo Este 11504",
       textActive: '#b2b3b2',
       textColor: '#b2b3b2',
-      rrss: []
+      rrss: [],
+      inputValue : ''
       
     }
     this.addRrss = this.addRrss.bind(this)
@@ -40,40 +41,50 @@ class App extends Component  {
       });
   }
 
-  addRrss = (e) => {
-    const title = e.currentTarget.value;
+ 
 
-    //const hola = { name, value } = e.target
+  addRrss = (e) => {
+    const title = e.currentTarget.value;  
+
+    //const hola = { name, value } = e.currentTarget.value;
 
     //console.log(hola);
 
     
 
-    //console.log(title);
+    console.log(title);
 
-    if(this.state.rrss.includes(title)){
-      return;
-    }
+     if(this.state.rrss.includes(title)){
+       return;
+     }
     this.setState(prevState =>{
       return {rrss: [...prevState.rrss, title]}
+
+      
     })
   }
 
   
+  
 
   handleInput = (e) => {
     const {name, value} = e.target
+
     this.setState({
       
       [name]: value,
-      textActive: '#333'
+      textActive: '#333',
+
+     
 
     })
+
+    //console.log(this.state);
 
   }
 
   render(){
-    //console.log(this.state)
+   
 
    
 
