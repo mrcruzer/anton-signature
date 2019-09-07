@@ -18,6 +18,7 @@ class SignaturePreview extends PureComponent {
     
     const signatureData = this.props.getSignatureData;
     let color = signatureData.textColor;
+    //const 
 
     const nameStyle = {
       
@@ -91,10 +92,10 @@ class SignaturePreview extends PureComponent {
                             <tbody>
                               <tr>
                                 <td>
-                                  <a href="https://www.facebook.com/antonagencyrd/"><img alt="" width="28" src="https://img.mysignature.io/s/v3/8/2/1/8214630f-5a32-5c61-9153-719fc8b2218c.png"/></a>
+                                  <a href={`https://www.facebook.com/${signatureData.rrss}/`}><img alt="" width="28" src="https://img.mysignature.io/s/v3/8/2/1/8214630f-5a32-5c61-9153-719fc8b2218c.png"/></a>
                                 </td>
                                 <td>
-                                  <a href="https://twitter.com/antonagencyrd/"><img alt="" width="28" src="https://img.mysignature.io/s/v3/8/c/4/8c40f2db-8642-5df9-9d3d-4e6e6767458c.png"/></a>
+                                  <a href={`https://twitter.com/${signatureData.rrss}/`}><img alt="" width="28" src="https://img.mysignature.io/s/v3/8/c/4/8c40f2db-8642-5df9-9d3d-4e6e6767458c.png"/></a>
                                 </td>
                                 <td>
                                   <a href="https://www.instagram.com/antonagencyrd"><img alt="" width="28" src="https://img.mysignature.io/s/v3/1/c/9/1c94b69b-7b12-50ab-9eb5-bbd698022ffe.png"/></a>

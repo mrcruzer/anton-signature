@@ -64,7 +64,17 @@ class App extends Component  {
     })
   }
 
-  
+
+
+  rrss = (e) => {
+    const {name, value} = e.currentTarget.value;
+
+    this.setState({
+      [name]: value
+    })
+
+    
+  } 
   
 
   handleInput = (e) => {
@@ -95,6 +105,7 @@ class App extends Component  {
         <div className="main-information">
          <TwitterPicker width="100" color={this.state.textColor} triangle="hide" colors={this.colors} onChange={ this.handleChange }/>
          <SocialNetworks mainRRSS={this.state.rrss} addRrss={this.addRrss}/>
+         {/* <SocialNetworks mainRRSS={this.state.rrss} addRrss={this.addRrss}/> */}
         </div>
         <div className="main-render-preview">
           <SignaturePreview getSignatureData={this.state}/>

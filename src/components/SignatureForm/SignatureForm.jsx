@@ -15,6 +15,8 @@ class SignatureForm extends PureComponent {
  
 
   render () {
+
+    //console.log()
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
     }
