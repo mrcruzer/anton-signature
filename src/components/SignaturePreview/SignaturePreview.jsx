@@ -8,6 +8,7 @@ class SignaturePreview extends PureComponent {
 
     this.state = {
       hasError: false,
+      isHidden: true
       
     };
   }
@@ -18,6 +19,7 @@ class SignaturePreview extends PureComponent {
     
     const signatureData = this.props.getSignatureData;
     let color = signatureData.textColor;
+    let social = signatureData.rrss;
     //const 
 
     const nameStyle = {
@@ -35,10 +37,19 @@ class SignaturePreview extends PureComponent {
       color: signatureData.textActive
     }
 
+    const paddingStyle = {
+      paddingRight: '2px',
+      paddingTop: '4px'
+    }
+
     const tableLeftBorder = {
       borderLeft: `1px solid ${color}`,
       paddingLeft: '10px'
     }
+
+    // const socialData = {
+    //   social: social
+    // }
   
 
     
@@ -56,7 +67,6 @@ class SignaturePreview extends PureComponent {
           <div>Asunto: ¡Probando mi firma de correos!</div>
           <div>
             <p>Saludos para todo el TeamAnton,</p>
-            <p>Check out this awesome email signature created with MySignature</p>
             <p>Regards,</p>
           </div>
           <div></div>
@@ -90,16 +100,39 @@ class SignaturePreview extends PureComponent {
                         <td>
                           <table cellSpacing="0" cellPadding="0" border="0">
                             <tbody>
+                              
                               <tr>
-                                <td>
-                                  <a href={`https://www.facebook.com/${signatureData.rrss}/`}><img alt="" width="28" src="https://img.mysignature.io/s/v3/8/2/1/8214630f-5a32-5c61-9153-719fc8b2218c.png"/></a>
+                                
+                                <td style={paddingStyle}>
+                                  <a href={`https://www.facebook.com/${signatureData.Facebook}/`}><img alt="" width="25px;" width="25" src="https://img.mysignature.io/s/v3/2/5/5/2556e243-b6c3-522c-87ac-af1ae71d5fa1.png"/></a>
                                 </td>
-                                <td>
-                                  <a href={`https://twitter.com/${signatureData.rrss}/`}><img alt="" width="28" src="https://img.mysignature.io/s/v3/8/c/4/8c40f2db-8642-5df9-9d3d-4e6e6767458c.png"/></a>
+                                
+                                <td style={paddingStyle}>
+                                  <a href={`https://twitter.com/${signatureData.Twitter}/`}><img alt="" width="25px;" width="25" src="https://img.mysignature.io/s/v3/e/6/9/e6950ee0-d3a6-55fc-ab0b-84fb941d204f.png"/></a>
                                 </td>
-                                <td>
-                                  <a href="https://www.instagram.com/antonagencyrd"><img alt="" width="28" src="https://img.mysignature.io/s/v3/1/c/9/1c94b69b-7b12-50ab-9eb5-bbd698022ffe.png"/></a>
-                                </td> 
+                                <td style={paddingStyle}>
+                                  <a href={`https://www.instagram.com/${signatureData.Instagram}/`}><img alt="" width="25px;" width="25" src="https://img.mysignature.io/s/v3/3/c/5/3c52f8bd-b6e6-56c4-8a7e-ceb6e313bbad.png"/></a>
+                                </td>
+                                <td style={paddingStyle}>
+                                  <a href={`https://www.linkedin.com/${signatureData.LinkedIn}/`}><img alt="" width="25px;" width="25" src="https://img.mysignature.io/s/v3/1/c/f/1cf4f75e-0587-53d9-923f-79472558d74f.png"/></a>
+                                </td>
+                                <td style={paddingStyle}>
+                                  <a href={`https://www.snapchat.com/add/${signatureData.Snapchat}/`}><img alt="" width="25px;" width="25" src="https://img.mysignature.io/s/v3/2/d/3/2d36ab42-7ec7-5149-811d-f53e2cec495a.png"/></a>
+                                </td>
+                                <td style={paddingStyle}>
+                                  <a href={`https://www.telegram.org/${signatureData.Telegram}/`}><img alt="" width="25px;" width="23" src="https://img.mysignature.io/s/v3/0/2/5/02529738-aa51-5bd9-848e-2ca656aefa70.png"/></a>
+                                </td>
+                                <td style={paddingStyle}>
+                                  <a href={`https://www.chat.whatsapp.com/${signatureData.Whatsapp}/`}><img alt="" width="25px;" width="25" src="https://img.mysignature.io/s/v3/c/1/6/c1622954-f68e-5f1a-b14a-c4979b17e314.png"/></a>
+                                </td>
+                                <td style={paddingStyle}>
+                                  <a href={`https://www.youtube.com/${signatureData.Youtube}/`}><img alt="" width="25px;" width="25" src="https://img.mysignature.io/s/v3/e/f/6/ef6f4c68-2408-5e92-9603-899237fe140e.png"/></a>
+                                </td>
+                                <td style={paddingStyle}>
+                                  <a href={`https://pinterest.com/${signatureData.Pinterest}/`}><img alt="" width="25px;" width="25" src="https://img.mysignature.io/s/v3/0/8/b/08bc7e6a-29d4-5149-a2e5-f8d1b1209fe1.png"/></a>
+                                </td>
+                                
+                                
                               </tr> 
                             </tbody>
                           </table> 
@@ -125,3 +158,5 @@ SignaturePreview.defaultProps = {
 };
 
 export default SignaturePreview;
+
+

@@ -25,8 +25,7 @@ class SocialNetworks extends Component {
         <span key={i}>{icons} 
           <input type="text" 
           name={icons}
-          value={this.state.value}
-          onChange={this.props.rrss}
+          onChange={this.props.handleInput}
           placeholder="@usuario"/>
         </span>
         )
