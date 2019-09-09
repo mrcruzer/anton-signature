@@ -27,7 +27,7 @@ class App extends Component  {
       rrss: [],
       inputValue : '',
       //show: false
-      show: false
+      socialFacebook: false
       
     }
     this.addRrss = this.addRrss.bind(this)
@@ -46,18 +46,18 @@ class App extends Component  {
  
 
   addRrss = (e) => {
-    const title = e.currentTarget.value;  
+    const title = e.currentTarget.value;
+    //const {name, value } = e.target; 
 
 
 
      if(this.state.rrss.includes(title)){
-      //console.log(title);
+      //alert(title);
        return;
      }
     this.setState(prevState =>{
       return {
-        rrss: [...prevState.rrss, title],
-        //show: true
+        rrss: [...prevState.rrss, title]
         
         
       }
@@ -66,18 +66,6 @@ class App extends Component  {
     })
   }
 
-
-
-  // socialRRSS = (e) => {
-  //   const {name, value} = e.target;
-
-  //   alert(name);
-
-    
-
-    
-  // } 
-  
 
   handleInput = (e) => {
     const {name, value} = e.target
@@ -109,7 +97,6 @@ class App extends Component  {
         <div className="main-information">
          <TwitterPicker width="100" color={this.state.textColor} triangle="hide" colors={this.colors} onChange={ this.handleChange }/>
          <SocialNetworks mainRRSS={this.state.rrss} handleInput={this.handleInput} addRrss={this.addRrss}/>
-         {/* <SocialNetworks mainRRSS={this.state.rrss} addRrss={this.addRrss}/> */}
         </div>
         <div className="main-render-preview">
           <SignaturePreview getSignatureData={this.state}/>
