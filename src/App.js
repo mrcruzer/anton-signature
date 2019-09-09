@@ -25,7 +25,9 @@ class App extends Component  {
       textActive: '#b2b3b2',
       textColor: '#b2b3b2',
       rrss: [],
-      inputValue : ''
+      inputValue : '',
+      //show: false
+      show: false
       
     }
     this.addRrss = this.addRrss.bind(this)
@@ -46,23 +48,18 @@ class App extends Component  {
   addRrss = (e) => {
     const title = e.currentTarget.value;  
 
-    //const hola = { name, value } = e.currentTarget.value;
 
-    //console.log(hola);
-
-    //alert(title);
-
-    
-
-    console.log(title);
 
      if(this.state.rrss.includes(title)){
+      //console.log(title);
        return;
      }
     this.setState(prevState =>{
       return {
         rrss: [...prevState.rrss, title],
-        ishidden: false
+        //show: true
+        
+        
       }
 
       
