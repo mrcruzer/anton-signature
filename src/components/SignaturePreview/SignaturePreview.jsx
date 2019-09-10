@@ -19,7 +19,8 @@ class SignaturePreview extends PureComponent {
     
     const signatureData = this.props.getSignatureData;
     let color = signatureData.textColor;
-    //let social = signatureData.rrss;
+    let social = signatureData.rrss;
+    
 
 
     // const classFacebook = {
@@ -108,16 +109,23 @@ class SignaturePreview extends PureComponent {
                             <tbody>
                               
                               <tr>
+                              {(() => {
+                              switch(this.state.social) {
+                                case 'Facebook':
+                                  return <td style={paddingStyle}>
+                                  <a href={`https://www.facebook.com/${signatureData.Facebook}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/2/5/5/2556e243-b6c3-522c-87ac-af1ae71d5fa1.png"/></a>
+                                  </td>;
+                              }
+                             
+                                 
                               
-                               
-                                <td style={paddingStyle}>
-                                  <a style={{display: this.state.socialFacebook ? 'none' : 'block'  }} href={`https://www.facebook.com/${signatureData.Facebook}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/2/5/5/2556e243-b6c3-522c-87ac-af1ae71d5fa1.png"/></a>
-                                </td>
+                              })()}
                               
                                 
                                 <td style={paddingStyle}>
                                   <a href={`https://twitter.com/${signatureData.Twitter}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/e/6/9/e6950ee0-d3a6-55fc-ab0b-84fb941d204f.png"/></a>
                                 </td>
+                               
 
                                 <td style={paddingStyle}>
                                   <a href={`https://www.instagram.com/${signatureData.Instagram}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/3/c/5/3c52f8bd-b6e6-56c4-8a7e-ceb6e313bbad.png"/></a>
@@ -147,7 +155,12 @@ class SignaturePreview extends PureComponent {
                                   <a href={`https://pinterest.com/${signatureData.Pinterest}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/0/8/b/08bc7e6a-29d4-5149-a2e5-f8d1b1209fe1.png"/></a>
                                 </td>
 
-                              </tr> 
+                              </tr>
+
+                             
+                                {social}
+                              
+                          
                             </tbody>
                           </table> 
                         </td>

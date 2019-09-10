@@ -27,7 +27,7 @@ class App extends Component  {
       rrss: [],
       inputValue : '',
       //show: false
-      socialFacebook: false
+      //socialFacebook: false
       
     }
     this.addRrss = this.addRrss.bind(this)
@@ -47,7 +47,7 @@ class App extends Component  {
 
   addRrss = (e) => {
     const title = e.currentTarget.value;
-    //const {name, value } = e.target; 
+    
 
 
 
