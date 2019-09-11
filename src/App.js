@@ -22,12 +22,21 @@ class App extends Component  {
       signatureWebsite: "anton.agency",
       signatureEmail: "ejemplo@anton.agency",
       signatureAddress: "C/ Puerto Rico 310, Alma Rosa 1, Santo Domingo Este 11504",
+      signatureFacebook: 'Facebook',
+      signatureTwitter: 'Twitter',
+      signatureInstagram: 'Instagram',
+      signatureLinkedIn: 'LinkedIn',
+      signatureSnapchat: 'Snapchat',
+      signatureTelegram: 'Telegram',
+      signatureWhatsapp: 'Whatsapp',
+      signatureYoutube: 'Youtube',
+      signaturePinterest: 'Pinterest',
       textActive: '#b2b3b2',
       textColor: '#b2b3b2',
       rrss: [],
       inputValue : '',
-      //show: false
-      //socialFacebook: false
+
+  
       
     }
     this.addRrss = this.addRrss.bind(this)
@@ -47,6 +56,7 @@ class App extends Component  {
 
   addRrss = (e) => {
     const title = e.currentTarget.value;
+    const {name, value} = e.target
     
 
 
@@ -57,7 +67,8 @@ class App extends Component  {
      }
     this.setState(prevState =>{
       return {
-        rrss: [...prevState.rrss, title]
+        rrss: [...prevState.rrss, title],
+        [name]: value
         
         
       }
@@ -96,7 +107,7 @@ class App extends Component  {
       <main className="main-signature">
         <div className="main-information">
          <TwitterPicker width="100" color={this.state.textColor} triangle="hide" colors={this.colors} onChange={ this.handleChange }/>
-         <SocialNetworks mainRRSS={this.state.rrss} handleInput={this.handleInput} addRrss={this.addRrss}/>
+         <SocialNetworks mainRRSS={this.state.rrss} handleInput={this.handleInput} onChange={ this.handleChange } addRrss={this.addRrss}/>
         </div>
         <div className="main-render-preview">
           <SignaturePreview getSignatureData={this.state}/>
