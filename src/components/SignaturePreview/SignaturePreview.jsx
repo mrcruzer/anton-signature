@@ -103,39 +103,39 @@ class SignaturePreview extends PureComponent {
   
     if(facebookArray == signatureData.signatureFacebook){
 
-       partialFacebook = <a href={`https://www.facebook.com/${signatureData.Facebook}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/2/5/5/2556e243-b6c3-522c-87ac-af1ae71d5fa1.png"/></a>
+       partialFacebook = <a href={`https://www.facebook.com/${signatureData.Facebook}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/2/5/5/2556e243-b6c3-522c-87ac-af1ae71d5fa1.png"/></a>
 
      } if(twitterArray == signatureData.signatureTwitter) {
 
-       partialTwitter = <a href={`https://twitter.com/${signatureData.Twitter}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/e/6/9/e6950ee0-d3a6-55fc-ab0b-84fb941d204f.png"/></a>
+       partialTwitter = <a href={`https://twitter.com/${signatureData.Twitter}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/e/6/9/e6950ee0-d3a6-55fc-ab0b-84fb941d204f.png"/></a>
 
      } if(instagramArray == signatureData.signatureInstagram) {
 
-       partialInstagram = <a href={`https://www.instagram.com/${signatureData.Instagram}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/3/c/5/3c52f8bd-b6e6-56c4-8a7e-ceb6e313bbad.png"/></a>
+       partialInstagram = <a href={`https://www.instagram.com/${signatureData.Instagram}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/3/c/5/3c52f8bd-b6e6-56c4-8a7e-ceb6e313bbad.png"/></a>
 
      } if(linkedInArray == signatureData.signatureLinkedIn) {
 
-       partialLinkedIn = <a href={`https://www.linkedin.com/${signatureData.LinkedIn}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/1/c/f/1cf4f75e-0587-53d9-923f-79472558d74f.png"/></a>
+       partialLinkedIn = <a href={`https://www.linkedin.com/${signatureData.LinkedIn}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/1/c/f/1cf4f75e-0587-53d9-923f-79472558d74f.png"/></a>
 
      } if(snapchatArray == signatureData.signatureSnapchat) {
 
-       partialSnapchat = <a href={`https://www.snapchat.com/add/${signatureData.Snapchat}/`}><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/2/d/3/2d36ab42-7ec7-5149-811d-f53e2cec495a.png"/></a>
+       partialSnapchat = <a href={`https://www.snapchat.com/add/${signatureData.Snapchat}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/2/d/3/2d36ab42-7ec7-5149-811d-f53e2cec495a.png"/></a>
 
      } if(telegramArray == signatureData.signatureTelegram) {
 
-       partialTelegram = <a href={`https://www.telegram.org/${signatureData.Telegram}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/0/2/5/02529738-aa51-5bd9-848e-2ca656aefa70.png"/></a>
+       partialTelegram = <a href={`https://www.telegram.org/${signatureData.Telegram}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/0/2/5/02529738-aa51-5bd9-848e-2ca656aefa70.png"/></a>
       
      } if(whatsappArray == signatureData.signatureWhatsapp) {
 
-       partialWhatsapp = <a href={`https://www.chat.whatsapp.com/${signatureData.Whatsapp}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/c/1/6/c1622954-f68e-5f1a-b14a-c4979b17e314.png"/></a>
+       partialWhatsapp = <a href={`https://www.chat.whatsapp.com/${signatureData.Whatsapp}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/c/1/6/c1622954-f68e-5f1a-b14a-c4979b17e314.png"/></a>
 
      } if(youtubeArray == signatureData.signatureYoutube) {
 
-       partialYoutube = <a href={`https://www.youtube.com/${signatureData.Youtube}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/e/f/6/ef6f4c68-2408-5e92-9603-899237fe140e.png"/></a>
+       partialYoutube = <a href={`https://www.youtube.com/${signatureData.Youtube}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/e/f/6/ef6f4c68-2408-5e92-9603-899237fe140e.png"/></a>
       
      } if(pinterestArray == signatureData.signaturePinterest) {
 
-       partialPinterest = <a href={`https://pinterest.com/${signatureData.Pinterest}/`} target="_blank" rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/0/8/b/08bc7e6a-29d4-5149-a2e5-f8d1b1209fe1.png"/></a>
+       partialPinterest = <a href={`https://pinterest.com/${signatureData.Pinterest}/`} target="_blank" without rel="noopener noreferrer"><img alt="" width="28px;" width="28" src="https://img.mysignature.io/s/v3/0/8/b/08bc7e6a-29d4-5149-a2e5-f8d1b1209fe1.png"/></a>
      }
 
     
